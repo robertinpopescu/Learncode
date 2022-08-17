@@ -1,8 +1,6 @@
-[
-    {
-        "author": "Robertin Popescu",
-        "version": 1,
-        "country": "Romania",
-        "city": "Bucharest"
-    }
-]
+{
+    "name": "Robertin Popescu",
+    "author": "Robi",
+    "country": "Roumania",
+    "city": "Bucharest"
+}
