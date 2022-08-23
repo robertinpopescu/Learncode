@@ -1,136 +1,137 @@
-//Keywords pentru declarare de variabile in JS : var, let, const
+// Keywords pentru declarare de variabile in JS : var, let, const
 // In JS nu este obligatoriu sa punem ";" dupa fiecare linie de cod
 // Exista 2 tipuri de date : primitive si obiecte
 // Primitivele sunt : boolean, null, undefined, number, string
 
 // Boolean
-// let boolean = false;
+let boolean = false;
 
-// // Null
-// let n = null;
+// Null
+let n = null;
 
-// // Undefined
-// let undf = undefined;
+// Undefined
+let undf = undefined;
 
-// // Number
-// let num = 123;
+// Number
+let num = 123;
 
-// // String
-// let str = "Acesta este un string";
+// String
+let str = "Acesta este un string";
 
-// // Obiect
-// let person = {
-//   age: 32,
-//   name: "Robertin",
-// };
+// Obiect
+let person = {
+  age: 32,
+  name: "Robertin",
+};
 
-// console.log(person);
+console.log(person);
 
-// // Array = siruri de caractere (numere, obiecte, etc.)
-// const hobbies = ["Reading", "Swimming", "Fishing"];
-// const prices = [12.5, 13.3, 25.7, 30.1];
+// Array = siruri de caractere (numere, obiecte, etc.)
 
-// const swimming = hobbies[1];
+const hobbies = ["Reading", "Swimming", "Fishing"];
+const prices = [12.5, 13.3, 25.7, 30.1];
 
-// if//else
+const swimming = hobbies[1];
 
-// const age = 32;
+// if else
 
-// if (age < 32) {
-//   console.log("Esti nascut dupa 1990");
-// } else {
-//   console.log("Esti nascut inainte de 1990");
-// }
+const age = 32;
 
-// // for loop
+if (age < 32) {
+  console.log("Esti nascut dupa 1990");
+} else {
+  console.log("Esti nascut inainte de 1990");
+}
 
-// const people = ["Robi, Georgiana, Luca, Razvan"];
+// for loop
 
-// for (i = people.lenght - 1; i >= 0; i--) {
-//   console.log(people[i]);
-// }
+const people = ["Robi, Georgiana, Luca, Razvan"];
 
-// let number = 1;
+for (i = people.lenght - 1; i >= 0; i--) {
+  console.log(people[i]);
+}
 
-// while(number <= 10){
-//     // console.log(number);
-//     number++;
-// }
+let number = 1;
 
-// do {
-//     number++;
-//     console.log(number);
-// }while(number <= 10);
+while(number <= 10){
+  console.log(number);
+    number++;
+}
 
-// switch(number){
-//     case 1:
-//         console.log("Number este 1");
-//         break;
-//     case 2:
-//         console.log("Number este 2");
-//         break;
-//     default:
-//         console.log("Number este defapt: " + number);
-// }
+do {
+    number++;
+    console.log(number);
+}while(number <= 10);
 
-// // Prinderea si tratarea erorilor
+switch(number){
+    case 1:
+        console.log("Number este 1");
+        break;
+    case 2:
+        console.log("Number este 2");
+        break;
+    default:
+        console.log("Number este defapt: " + number);
+}
 
-// try{
-//     if(number === 1){
-//         console.log("Number are valoarea 1");
-//     }
-// }catch(error){
-//     console.log("Something happened: " + error.message);
-// }finally{
-//     console.log("Finally a fost executat");
-// }
+// Prinderea si tratarea erorilor
+
+try{
+    if(number === 1){
+        console.log("Number are valoarea 1");
+    }
+}catch(error){
+    console.log("Something happened: " + error.message);
+}finally{
+    console.log("Finally a fost executat");
+}
 
 // JavaScript foloseste Camel Casing, adica separarea cuvintelor se face prin litera mare:
 // EX: displayName, displayMyName, displayMyMiddleName etc... Primul cuvant este cu litera mica, apoi urmatorul cuvant cu litera mare s.a.m.d
 
-// function displayPersonDetails(myName, age, email){
-//   console.log("My name is: " + myName);
-//   console.log("My age is: " + age);
-//   console.log("My email adress is: " + email);
-// }
+function displayPersonDetails(myName, age, email){
+  console.log("My name is: " + myName);
+  console.log("My age is: " + age);
+  console.log("My email adress is: " + email);
+}
 
-// displayPersonDetails("Robertin", 32, "robertinpopescu@email.com");
+displayPersonDetails("Robertin", 32, "robertinpopescu@email.com");
 
-// function function1(anotherFunction){
-//     anotherFunction();
-// }
+function function1(anotherFunction){
+    anotherFunction();
+}
 
-// function1(() => console.log("Functia a fost executata"));
+function1(() => console.log("Functia a fost executata"));
 
-// ((myName) => {
-//     console.log(myName);
-// })();
+((myName) => {
+    console.log(myName);
+})();
 
-// Clase in JavaScript
+Clase in JavaScript
 
-// class Person{
-//     constructor(firstName, lastName, dateOfBirth){
-//         this.firstName = firstName;
-//         this.lastName = lastName;
-//         this.dateOfBirth = dateOfBirth;
-//     }
+class Person{
+    constructor(firstName, lastName, dateOfBirth){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dateOfBirth = dateOfBirth;
+    }
 
-//     calculateAge(){
-//         return new Date().getFullYear() - this.dateOfBirth.getFullYear();
-//     }
-// }
+    calculateAge(){
+        return new Date().getFullYear() - this.dateOfBirth.getFullYear();
+    }
+}
 
-// var p = new Person("Popescu", "Robertin", new Date("13-07-1990"));
-// console.log(p.calculateAge());
+var p = new Person("Popescu", "Robertin", new Date("13-07-1990"));
+console.log(p.calculateAge());
 
-// EVENIMENTE
+EVENIMENTE
 
-// var submitButton = document.getElementById("btn-submit");
-// submitButton.addEventListener("click", onBtnClick);
+var submitButton = document.getElementById("btn-submit");
+submitButton.addEventListener("click", onBtnClick);
 
-// function onBtnClick(e) {
-//     alert("Button has been clicked");
-// }
+function onBtnClick(e) {
+    alert("Button has been clicked");
+}
 
 function difference(a, b) {
   console.log(a - b);
@@ -243,3 +244,4 @@ function isLess(a, b) {
 }
 
 console.log(isLess(10,15));
+
