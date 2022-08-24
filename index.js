@@ -53,43 +53,43 @@ for (i = people.lenght - 1; i >= 0; i--) {
 
 let number = 1;
 
-while(number <= 10){
+while (number <= 10) {
   console.log(number);
-    number++;
+  number++;
 }
 
 do {
-    number++;
-    console.log(number);
-}while(number <= 10);
+  number++;
+  console.log(number);
+} while (number <= 10);
 
-switch(number){
-    case 1:
-        console.log("Number este 1");
-        break;
-    case 2:
-        console.log("Number este 2");
-        break;
-    default:
-        console.log("Number este defapt: " + number);
+switch (number) {
+  case 1:
+    console.log("Number este 1");
+    break;
+  case 2:
+    console.log("Number este 2");
+    break;
+  default:
+    console.log("Number este defapt: " + number);
 }
 
 // Prinderea si tratarea erorilor
 
-try{
-    if(number === 1){
-        console.log("Number are valoarea 1");
-    }
-}catch(error){
-    console.log("Something happened: " + error.message);
-}finally{
-    console.log("Finally a fost executat");
+try {
+  if (number === 1) {
+    console.log("Number are valoarea 1");
+  }
+} catch (error) {
+  console.log("Something happened: " + error.message);
+} finally {
+  console.log("Finally a fost executat");
 }
 
 // JavaScript foloseste Camel Casing, adica separarea cuvintelor se face prin litera mare:
 // EX: displayName, displayMyName, displayMyMiddleName etc... Primul cuvant este cu litera mica, apoi urmatorul cuvant cu litera mare s.a.m.d
 
-function displayPersonDetails(myName, age, email){
+function displayPersonDetails(myName, age, email) {
   console.log("My name is: " + myName);
   console.log("My age is: " + age);
   console.log("My email adress is: " + email);
@@ -97,40 +97,40 @@ function displayPersonDetails(myName, age, email){
 
 displayPersonDetails("Robertin", 32, "robertinpopescu@email.com");
 
-function function1(anotherFunction){
-    anotherFunction();
+function function1(anotherFunction) {
+  anotherFunction();
 }
 
 function1(() => console.log("Functia a fost executata"));
 
 ((myName) => {
-    console.log(myName);
+  console.log(myName);
 })();
 
-Clase in JavaScript
+Clase in JavaScript;
 
-class Person{
-    constructor(firstName, lastName, dateOfBirth){
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.dateOfBirth = dateOfBirth;
-    }
+class Person {
+  constructor(firstName, lastName, dateOfBirth) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dateOfBirth = dateOfBirth;
+  }
 
-    calculateAge(){
-        return new Date().getFullYear() - this.dateOfBirth.getFullYear();
-    }
+  calculateAge() {
+    return new Date().getFullYear() - this.dateOfBirth.getFullYear();
+  }
 }
 
 var p = new Person("Popescu", "Robertin", new Date("13-07-1990"));
 console.log(p.calculateAge());
 
-EVENIMENTE
+// EVENIMENTE
 
 var submitButton = document.getElementById("btn-submit");
 submitButton.addEventListener("click", onBtnClick);
 
 function onBtnClick(e) {
-    alert("Button has been clicked");
+  alert("Button has been clicked");
 }
 
 function difference(a, b) {
@@ -243,5 +243,5 @@ function isLess(a, b) {
   return a > b;
 }
 
-console.log(isLess(10,15));
+console.log(isLess(10, 15));
 
