@@ -1,24 +1,29 @@
-// document.getElementById("count").innerText = 5
+let countEl = document.getElementById("count-el");
+let welcomeEl = document.getElementById("welcome-el");
+let saveEl = document.getElementById("save-el");
 
-let firstBatch = 5;
-let secondBatch = 7;
+console.log(saveEl)
 
-let count = firstBatch + secondBatch;
+let count = 0
 
-console.log(count)
+function increment () {
+    count += 1;
+    countEl.textContent = count;
+}
 
-// 1. Create a variable called "myAge", and set its value to your age
-// let myAge = 32;
+let myName = "Robertin";
 
-// 2. Log the myAge variable to the console
-// console.log(myAge)
+let greetings = "Welcome, Robertin ! Have a nice day !"
 
-// 1. Create two variables, myAge and humanDogRatio
-// 2. Multiply the two together and store the result in myDogAge 
-// 3. Log myDogAge to the console
+welcomeEl.innerText = greetings 
 
-let myAge = 32;
-let humanDogRatio = 7;
+welcomeEl.innerText += "👋"
 
-let myDogAge = myAge * humanDogRatio;
-console.log(myDogAge)
+let dashSeparator = "-"
+
+function save() {    
+    let countStr = count + " - ";
+    saveEl.textContent += countStr;
+    countEl.textContent = 0;
+    count = 0
+}
